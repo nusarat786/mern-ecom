@@ -24,6 +24,10 @@ const payment = require("./routes/paymentRoute");
 const wishlist = require("./routes/wishlistRoute");
 const { urlencoded } = require("body-parser");
 
+//coursd
+var cors = require('cors')
+
+app.use(cors()) // Use this after the variable declaration
 app.use("/api/v1", product);
 app.use("/api/v1", user);
 app.use("/api/v1/", order);
